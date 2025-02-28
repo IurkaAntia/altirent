@@ -5,19 +5,17 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
   const { id } = await params;
 
   try {
-    const tour = await prisma.tour.findUnique({
+    const gear = await prisma.gear.findUnique({
       where: { id: parseInt(id) },
       include: {
-        gallery: true,
-        type: true,
       },
     });
 
-    if (!tour) {
+    if (!gear) {
       return NextResponse.json({ error: "Tour not found" }, { status: 404 });
     }
 
-    return NextResponse.json(tour);
+    return NextResponse.json(gear);
   } catch {
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }

@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  nextjs:
+    build: .
+    container_name: altirent_app
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "3030:30"
+    environment:
+      DATABASE_URL: "postgresql://postgres:voldemort@localhost:5432/altirent3"
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  db:
+    image: postgres:15-alpine
+    container_name: altirent_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: voldemort
+      POSTGRES_DB: altirent3
+    ports:
+      - "5433:5432"
+    volumes:
+      - /var/lib/postgresql/16/main:/var/lib/postgresql/data

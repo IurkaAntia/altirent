@@ -7,90 +7,42 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Type {
-  id    Int    @id @default(autoincrement())
-  name  String @unique
-  tours Tour[]
+model Category {
+  id        Int        @id @default(autoincrement())
+  name      String     @unique
+  gear      Gear[]
+  posts     BlogPost[]
+  createdAt DateTime   @default(now())
 }
 
-model Tour {
+model Gear {
   id          Int      @id @default(autoincrement())
-  title       String
-  description String
-  location    String
-  price       Decimal
-  duration    Int
-  startDate   DateTime
-  endDate     DateTime
-  image       String?
-  typeId      Int
-  bestOffer   Boolean  @default(false)
-  adventures  Boolean  @default(false)
-  experience  Boolean  @default(false)
+  name        String
+  description String?
+  pricePerDay Decimal
+  available   Boolean  @default(true)
+  categoryId  Int
+  category    Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-  type        Type     @relation(fields: [typeId], references: [id])
-  gallery    Gallery[]
 }
 
-model ContactLid {
-  id         Int       @id @default(autoincrement())
-  name       String?
-  email      String
-  comment    String?
-  subscribe  Boolean?  @default(false)
+model BlogPost {
+  id         Int      @id @default(autoincrement())
+  title      String
+  content    String
+  summary    String?
+  categoryId Int
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
 
-model About {
-  id          Int      @id @default(autoincrement())
-  title       String
-  description String
-  image       String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-}
-
-model Gallery {
-  id          Int      @id @default(autoincrement())
-  tourId      Int
-  image       String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  tour        Tour     @relation(fields: [tourId], references: [id])
-}
-
-model Contact {
-  id          Int      @id @default(autoincrement())
-  phone       String
-  location    String?
-  email       String
-  facebook    String?
-  instagram   String?
-  youtube     String?
-  whatsapp    String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-}
-
-model Team {
-  id          Int      @id @default(autoincrement())
-  name        String
-  surname     String?
-  position    String?
-  image       String?
-  facebook    String?
-  instagram   String?
-  twitter     String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-}
-
-model Faq {
-  id          Int      @id @default(autoincrement())
-  title       String
-  description String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+model ContactMessage {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
 }

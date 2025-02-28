@@ -13,7 +13,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { IoHeart } from "react-icons/io5";
 import Image from "next/image";
 
-
 export default function TourDetail() {
   const params = useParams();
   const [likedState, setLikedState] = useState<{ [key: string]: boolean }>({});
@@ -127,22 +126,22 @@ export default function TourDetail() {
         </div>
 
         <div className="flex-grow">
-            <Book tourId={tour.id} tourPrice={tour.price} />
+          <Book tourId={tour.id} tourPrice={tour.price} />
         </div>
       </div>
-      <p className="text-md text-primary-100 font-semibold mt-8">
+      <p className="text-md text-green-1000 font-semibold mt-8">
         Tour duration: {formatDate(tour.startDate)} - {formatDate(tour.endDate)}
       </p>
       <h1 className="text-2xl sm:text-4xl font-semibold my-2">{tour.title}</h1>
-      <p className="text-sm text-primary-100">Location: {tour.location}</p>
-      <p className="text-sm text-primary-100">Price: {tour.price}$</p>
-      <p className="text-sm text-primary-100">type: {tour.type.name}</p>
+      <p className="text-sm text-green-1000">Location: {tour.location}</p>
+      <p className="text-sm text-green-1000">Price: {tour.price}$</p>
+      <p className="text-sm text-green-1000">type: {tour.type.name}</p>
       <p className="mt-4 text-lg">{tour.description}</p>
 
       <hr className="mt-12 h-1/2 border-filter" />
       <div className="mt-12">
         <h2 className="text-2xl sm:text-4xl font-semibold text-center">
-          ALL TOURS
+          ALL GEARS
         </h2>
 
         <div className="my-6">

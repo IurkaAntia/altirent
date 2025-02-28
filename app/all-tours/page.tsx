@@ -24,10 +24,7 @@ export default function Page() {
     page: page.toString(),
   }).toString();
 
-  const {
-    data: allTours,
-    loading,
-  } = useFetchData(`allTours?${filterQuery}`);
+  const { data: allTours, loading } = useFetchData(`allTours?${filterQuery}`);
 
   if (loading) {
     return (
@@ -55,11 +52,16 @@ export default function Page() {
         </div>
       ) : (
         <>
-          <ToursCard tours={allTours} hrefTo="all-tours" showDetail={true} showDuration={true}  />
+          <ToursCard
+            tours={allTours}
+            hrefTo="all-tours"
+            showDetail={true}
+            showDuration={true}
+          />
 
           <div className="flex justify-center mt-8 space-x-6 items-center">
             <button
-              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-primary-100 transition-colors duration-300 disabled:opacity-50"
+              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-green-1000 transition-colors duration-300 disabled:opacity-50"
               onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
               disabled={page === 1}
             >
@@ -69,7 +71,7 @@ export default function Page() {
               Page {page}
             </span>
             <button
-              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-primary-100 transition-colors duration-300 disabled:opacity-50"
+              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-green-1000 transition-colors duration-300 disabled:opacity-50"
               onClick={() => setPage((prev) => prev + 1)}
               disabled={!hasMoreData}
             >

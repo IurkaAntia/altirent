@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "travel app",
+  title: "AltiRent",
   description: "Plan your trip",
 };
 

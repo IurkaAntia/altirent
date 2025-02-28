@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsPlusLg } from "react-icons/bs";
@@ -39,22 +39,22 @@ export default function ToursCard({
   };
 
   return (
-    <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="mt-6">
       {tours.map((tour) => (
         <Link href={`/${hrefTo}/${tour.id}`} key={tour.id}>
           <div className="group relative">
             <div
               className={`w-full shadow-sm overflow-hidden rounded-lg relative ${
-                showDetail ? "h-[450px]" : "h-[350px] sm:h-[450px] lg:h-[550px]"
+                showDetail ? "h-[130px]" : "h-[150px] sm:h-[250px] lg:h-[350px]"
               }`}
             >
-              <Image
-                src={`/tours/${tour.image}`}
-                width={1200}
-                height={550}
-                alt={tour.title}
-                className="rounded-lg object-cover h-full w-full group-hover:scale-105 transition-transform duration-500"
-              />
+              {/*<Image*/}
+              {/*  src={`/tours/${tour.image}`}*/}
+              {/*  width={1200}*/}
+              {/*  height={550}*/}
+              {/*  alt={tour.title}*/}
+              {/*  className="rounded-lg object-cover h-full w-full group-hover:scale-105 transition-transform duration-500"*/}
+              {/*/>*/}
 
               <button
                 onClick={(e) => {
@@ -72,12 +72,12 @@ export default function ToursCard({
 
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-35 opacity-0 translate-y-full transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 flex items-center justify-center rounded-lg">
-                <BsPlusLg className="text-primary-100 text-4xl" />
+                <BsPlusLg className="text-green-1000 text-4xl" />
               </div>
             </div>
             {showDetail && (
               <div className="flex justify-start items-center mt-2">
-                <p className="text-md text-primary-100">
+                <p className="text-md text-green-1000">
                   ${tour.price} {tour.location}{" "}
                   {showDuration && `${tour.duration} days`}
                 </p>
@@ -85,7 +85,7 @@ export default function ToursCard({
             )}
 
             <p
-              className={`text-xl sm:text-2xl font-semibold hover:text-primary transition-colors duration-500 ${
+              className={`text-xl sm:text-2xl font-semibold hover:text-green-1000 transition-colors duration-500 ${
                 !showDetail ? "text-center mt-4" : "mt-2"
               }`}
             >

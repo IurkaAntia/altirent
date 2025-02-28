@@ -10,7 +10,7 @@ export default function Page() {
   const pageSize = 12;
 
   const { data: teams, loading } = useFetchData(
-    `teams?page=${page.toString()}`
+    `teams?page=${page.toString()}`,
   );
 
   if (loading)
@@ -44,7 +44,7 @@ export default function Page() {
 
           <div className="flex justify-center mt-8 space-x-6 items-center">
             <button
-              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-primary-100 transition-colors duration-300 disabled:opacity-50"
+              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-green-1000 transition-colors duration-300 disabled:opacity-50"
               onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
               disabled={page === 1}
             >
@@ -54,7 +54,7 @@ export default function Page() {
               Page {page}
             </span>
             <button
-              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-primary-100 transition-colors duration-300 disabled:opacity-50"
+              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-green-1000 transition-colors duration-300 disabled:opacity-50"
               onClick={() => setPage((prev) => prev + 1)}
               disabled={!hasMoreData}
             >

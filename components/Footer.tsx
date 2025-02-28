@@ -18,12 +18,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start w-full max-w-7xl px-4 mx-auto mb-10 md:mb-0">
           <div className="flex flex-col gap-10">
             <Link href="/">
-              <Image
-                src="/logo.png"
-                width={150}
-                height={150}
-                alt="logo"
-              />
+              <Image src="/logo.png" width={150} height={150} alt="logo" />
             </Link>
 
             <div className="flex flex-col gap-3">
@@ -31,8 +26,8 @@ export default function Footer() {
                 href={`tel:${contactInfo.phone}`}
                 className="flex items-center gap-2"
               >
-                <IoCall size={20} className="text-primary" />
-                <span className="text-md text-gray-400 hover:text-primary-100 duration-300">
+                <IoCall size={20} className="text-green-1000" />
+                <span className="text-md text-gray-400 hover:text-green-1000 duration-300">
                   {contactInfo.phone}
                 </span>
               </a>
@@ -41,8 +36,8 @@ export default function Footer() {
                 href={`mailto:${contactInfo.email}`}
                 className="flex items-center gap-2"
               >
-                <IoMail size={20} className="text-primary" />
-                <span className="text-md text-gray-400 hover:text-primary-100 duration-300">
+                <IoMail size={20} className="text-green-1000" />
+                <span className="text-md text-gray-400 hover:text-green-1000 duration-300">
                   {contactInfo.email}
                 </span>
               </a>
@@ -55,25 +50,25 @@ export default function Footer() {
                 <Link href="/one-day-tours">
                   <li className="relative group hover:translate-x-6 hover:text-white transition-all duration-500 mb-4">
                     One Day Tours
-                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-primary-100 scale-x-0 group-hover:scale-x-100 transition-all"></span>
+                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-green-1000 scale-x-0 group-hover:scale-x-100 transition-all"></span>
                   </li>
                 </Link>
                 <Link href="/experience">
                   <li className="relative group hover:translate-x-6 hover:text-white transition-all duration-500 mb-4">
                     Experience
-                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-primary-100 scale-x-0 group-hover:scale-x-100 transition-all"></span>
+                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-green-1000 scale-x-0 group-hover:scale-x-100 transition-all"></span>
                   </li>
                 </Link>
                 <Link href="/adventures">
                   <li className="relative group hover:translate-x-6 hover:text-white transition-all duration-500 mb-4">
                     Adventures
-                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-primary-100 scale-x-0 group-hover:scale-x-100 transition-all"></span>
+                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-green-1000 scale-x-0 group-hover:scale-x-100 transition-all"></span>
                   </li>
                 </Link>
                 <Link href="/all-tours">
                   <li className="relative group hover:translate-x-6 hover:text-white transition-all duration-500 mb-4">
                     All Tours
-                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-primary-100 scale-x-0 group-hover:scale-x-100 transition-all"></span>
+                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-green-1000 scale-x-0 group-hover:scale-x-100 transition-all"></span>
                   </li>
                 </Link>
               </ul>
@@ -84,25 +79,25 @@ export default function Footer() {
                 <Link href="/our-team">
                   <li className="relative group hover:translate-x-6 hover:text-white transition-all duration-500 mb-4">
                     Our Team
-                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-primary-100 scale-x-0 group-hover:scale-x-100 transition-all"></span>
+                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-green-1000 scale-x-0 group-hover:scale-x-100 transition-all"></span>
                   </li>
                 </Link>
                 <Link href="/faq">
                   <li className="relative group hover:translate-x-6 hover:text-white transition-all duration-500 mb-4">
                     FAQ
-                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-primary-100 scale-x-0 group-hover:scale-x-100 transition-all"></span>
+                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-green-1000 scale-x-0 group-hover:scale-x-100 transition-all"></span>
                   </li>
                 </Link>
                 <Link href="/about">
                   <li className="relative group hover:translate-x-6 hover:text-white transition-all duration-500 mb-4">
                     About
-                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-primary-100 scale-x-0 group-hover:scale-x-100 transition-all"></span>
+                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-green-1000 scale-x-0 group-hover:scale-x-100 transition-all"></span>
                   </li>
                 </Link>
                 <Link href="/contact">
                   <li className="relative group hover:translate-x-6 hover:text-white transition-all duration-500 mb-4">
                     Contact
-                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-primary-100 scale-x-0 group-hover:scale-x-100 transition-all"></span>
+                    <span className="absolute bottom-1/2 -left-4 w-3 h-[2px] bg-green-1000 scale-x-0 group-hover:scale-x-100 transition-all"></span>
                   </li>
                 </Link>
               </ul>
@@ -114,7 +109,7 @@ export default function Footer() {
           <div className="flex flex-row items-center justify-between">
             <div className="flex items-center gap-6">
               <button
-                className="bg-primary-100 px-6 py-6 rounded-tl-lg hover:bg-secondary-300 transition-all duration-500"
+                className="bg-green-1000 px-6 py-6 rounded-tl-lg hover:bg-secondary-300 transition-all duration-500"
                 onClick={scrollToTop}
               >
                 <IoArrowUp size={24} className="text-white" />
@@ -127,7 +122,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="bg-secondary-300 p-4 rounded-full hover:scale-105 hover:bg-primary-100 hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
+                    <div className="bg-secondary-300 p-4 rounded-full hover:scale-105 hover:bg-green-1000 hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
                       <FaFacebook size={14} className="text-white" />
                     </div>
                   </a>
@@ -139,7 +134,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="bg-secondary-300 p-4 rounded-full hover:scale-105 hover:bg-primary-100 hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
+                    <div className="bg-secondary-300 p-4 rounded-full hover:scale-105 hover:bg-green-1000 hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
                       <FaInstagram size={14} className="text-white" />
                     </div>
                   </a>
@@ -151,7 +146,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="bg-secondary-300 p-4 rounded-full hover:scale-105 hover:bg-primary-100 hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
+                    <div className="bg-secondary-300 p-4 rounded-full hover:scale-105 hover:bg-green-1000 hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
                       <FaYoutube size={14} className="text-white" />
                     </div>
                   </a>
@@ -160,7 +155,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs sm:text-sm text-white font-semibold mt-4 sm:mt-0 pr-2 sm:pr-10 2xl:mr-72">
-              Copyright © 2025 | Created By Tornike.
+              Copyright © 2025 | Created By ZTI.
             </p>
           </div>
         </div>

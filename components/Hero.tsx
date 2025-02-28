@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Contact from "./Contact";
 import Image from "next/image";
 
-export default function Hero ({ addStyle }: { addStyle?: string }) {
+export default function Hero({ addStyle }: { addStyle?: string }) {
   const [mounted, setMounted] = useState(false);
   const [toggle, setToggle] = useState(false);
   const pathname: string | null = usePathname();
@@ -21,10 +21,10 @@ export default function Hero ({ addStyle }: { addStyle?: string }) {
   const heroStyle: string = pathname === "/" ? "min-h-screen" : "min-h-96";
 
   const links = [
-    { href: "/one-day-tours", label: "One Day Tours" },
+    { href: "/available-gear", label: "Available Gear" },
     { href: "/experience", label: "Experience" },
     { href: "/adventures", label: "Adventures" },
-    { href: "/all-tours", label: "All Tours" },
+    { href: "/all-gears", label: "All Gears" },
     { href: "/our-team", label: "Our Team" },
     { href: "/faq", label: "FAQ" },
     { href: "/about", label: "About" },
@@ -47,7 +47,7 @@ export default function Hero ({ addStyle }: { addStyle?: string }) {
         <Contact />
 
         <div
-          className={`flex lg:justify-around items-center px-9 lg:px-28 py-7 fixed bg-secondary lg:relative lg:bg-opacity-0 w-full`}
+          className={`flex lg:justify-around items-center px-9 lg:px-20 fixed bg-secondary lg:relative lg:bg-opacity-0 w-full`}
         >
           <Link href="/">
             <Image
@@ -55,7 +55,7 @@ export default function Hero ({ addStyle }: { addStyle?: string }) {
               width={150}
               height={150}
               alt="logo"
-              className="w-26 h-10 lg:w-40 lg:h-14"
+              className="w-26 h-26 lg:w-40 lg:h-35 bg-clip-padding"
             />
           </Link>
 
@@ -68,14 +68,14 @@ export default function Hero ({ addStyle }: { addStyle?: string }) {
                 <li key={link.href} className="relative">
                   <Link
                     href={link.href}
-                    className={`relative pb-14 transition duration-300 ${
+                    className={`relative pb-10 transition duration-300 ${
                       mounted && isActive
-                        ? "border-b-2 border-primary"
+                        ? "border-b-2 border-green-1000"
                         : "border-b-2 border-transparent"
                     } ${
                       mounted &&
                       !isActive &&
-                      "after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                      "after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-1000 after:transition-all after:duration-300 hover:after:w-full"
                     }`}
                   >
                     {link.label}
@@ -136,4 +136,4 @@ export default function Hero ({ addStyle }: { addStyle?: string }) {
       </div>
     </div>
   );
-};
+}

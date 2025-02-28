@@ -93,7 +93,7 @@ export default function Page() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="bg-primary-100 p-4 rounded-full hover:scale-105 hover:bg-secondary hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
+                    <div className="bg-green-1000 p-4 rounded-full hover:scale-105 hover:bg-secondary hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
                       <FaFacebook size={18} className="text-white" />
                     </div>
                   </a>
@@ -104,7 +104,7 @@ export default function Page() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="bg-primary-100 p-4 rounded-full hover:scale-105 hover:bg-secondary hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
+                    <div className="bg-green-1000 p-4 rounded-full hover:scale-105 hover:bg-secondary hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
                       <FaInstagram size={18} className="text-white" />
                     </div>
                   </a>
@@ -115,7 +115,7 @@ export default function Page() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="bg-primary-100 p-4 rounded-full hover:scale-105 hover:bg-secondary hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
+                    <div className="bg-green-1000 p-4 rounded-full hover:scale-105 hover:bg-secondary hover:rotate-[360deg] transition-transform duration-500 ease-in-out">
                       <FaYoutube size={18} className="text-white" />
                     </div>
                   </a>
@@ -155,7 +155,7 @@ export default function Page() {
                 ></textarea>
                 <button
                   type="submit"
-                  className="relative w-full min-h-16 px-6 bg-primary-100 font-semibold text-white overflow-hidden rounded-lg group"
+                  className="relative w-full min-h-16 px-6 bg-green-1000 font-semibold text-white overflow-hidden rounded-lg group"
                   disabled={loading}
                 >
                   <span className="absolute inset-0 bg-secondary transform scale-y-0 group-hover:scale-y-100 origin-bottom transition-all duration-1000"></span>
@@ -174,13 +174,13 @@ export default function Page() {
                   href={`tel:${contactInfo.phone}`}
                   className="flex items-center gap-2"
                 >
-                  <div className="rounded-full bg-slate-50 p-4 group-hover:bg-primary-100 transition-all ease-in-out duration-500 group-hover:scale-105">
+                  <div className="rounded-full bg-slate-50 p-4 group-hover:bg-green-1000 transition-all ease-in-out duration-500 group-hover:scale-105">
                     <IoCall
                       size={28}
-                      className="text-primary group-hover:text-white transition-colors duration-500"
+                      className="text-green-1000 group-hover:text-white transition-colors duration-500"
                     />
                   </div>
-                  <span className="text-xl ml-4 text-gray-400 group-hover:text-primary-100 duration-500">
+                  <span className="text-xl ml-4 text-gray-400 group-hover:text-green-1000 duration-500">
                     {contactInfo.phone}
                   </span>
                 </a>
@@ -194,13 +194,13 @@ export default function Page() {
                   target="_blank"
                   className="flex items-center gap-2"
                 >
-                  <div className="rounded-full bg-slate-50 p-4 group-hover:bg-primary-100 transition-all ease-in-out duration-500 group-hover:scale-105">
+                  <div className="rounded-full bg-slate-50 p-4 group-hover:bg-green-1000 transition-all ease-in-out duration-500 group-hover:scale-105">
                     <IoLocation
                       size={28}
-                      className="text-primary group-hover:text-white transition-colors duration-500"
+                      className="text-green-1000 group-hover:text-white transition-colors duration-500"
                     />
                   </div>
-                  <span className="text-xl ml-4 text-gray-400 group-hover:text-primary-100 duration-500">
+                  <span className="text-xl ml-4 text-gray-400 group-hover:text-green-1000 duration-500">
                     {contactInfo.location}
                   </span>
                 </a>
@@ -213,13 +213,13 @@ export default function Page() {
                   href={`mailto:${contactInfo.email}`}
                   className="flex items-center gap-2"
                 >
-                  <div className="rounded-full bg-slate-50 p-4 group-hover:bg-primary-100 transition-all ease-in-out duration-500 group-hover:scale-105">
+                  <div className="rounded-full bg-slate-50 p-4 group-hover:bg-green-1000 transition-all ease-in-out duration-500 group-hover:scale-105">
                     <IoMail
                       size={28}
-                      className="text-primary group-hover:text-white transition-colors duration-500"
+                      className="text-green-1000 group-hover:text-white transition-colors duration-500"
                     />
                   </div>
-                  <span className="text-xl ml-4 text-gray-400 group-hover:text-primary-100 duration-500">
+                  <span className="text-xl ml-4 text-gray-400 group-hover:text-green-1000 duration-500">
                     {contactInfo.email}
                   </span>
                 </a>

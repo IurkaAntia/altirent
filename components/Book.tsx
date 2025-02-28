@@ -71,7 +71,7 @@ export default function Book({ tourId, tourPrice }: BookProps) {
         <button
           type="submit"
           disabled={isProcessing}
-          className="relative w-full min-h-12 px-6 bg-primary-100 font-semibold text-white overflow-hidden rounded-lg hover:bg-secondary transition-all duration-500"
+          className="relative w-full min-h-12 px-6 bg-green-1000 font-semibold text-white overflow-hidden rounded-lg hover:bg-secondary transition-all duration-500"
         >
           {isProcessing ? "Processing..." : "BOOK NOW"}
         </button>

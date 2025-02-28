@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-export default function Header () {
+export default function Header() {
   const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -37,10 +37,10 @@ export default function Header () {
   }, [lastScrollY, mounted]);
 
   const links = [
-    { href: "/one-day-tours", label: "One Day Tours" },
+    { href: "/all-tours", label: "Available Gear" },
     { href: "/experience", label: "Experience" },
     { href: "/adventures", label: "Adventures" },
-    { href: "/all-tours", label: "All Tours" },
+    // { href: "/all-tours", label: "All Tours" },
     { href: "/our-team", label: "Our Team" },
     { href: "/faq", label: "FAQ" },
     { href: "/about", label: "About" },
@@ -71,11 +71,11 @@ export default function Header () {
                 href={link.href}
                 className={`relative pb-9 transition duration-300 ${
                   isActive
-                    ? "border-b-2 border-primary"
+                    ? "border-b-2 border-green-1000"
                     : "border-b-2 border-transparent"
                 } ${
                   !isActive &&
-                  "after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                  "after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-1000 after:transition-all after:duration-300 hover:after:w-full"
                 }`}
               >
                 {link.label}
@@ -86,4 +86,4 @@ export default function Header () {
       </ul>
     </div>
   );
-};
+}

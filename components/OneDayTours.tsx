@@ -10,7 +10,7 @@ export default function OneDayTours() {
   return (
     <div className="px-4 mt-20 w-full">
       <h2 className="text-2xl sm:text-4xl font-semibold text-center">
-        ONE DAY TOURS
+        ALL GEARS
       </h2>
 
       <div className="my-12 px-3 sm:px-4 sm:mb-6 w-full">

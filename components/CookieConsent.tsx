@@ -26,7 +26,7 @@ export default function CookieConsentBanner () {
       cookieName="user-consent"
       onAccept={handleAccept}
       style={{
-        background: "#0dcaf0",
+        background: "#bfd085",
         display: "flex",
         justifyContent: 'center',
         alignContent: 'center',

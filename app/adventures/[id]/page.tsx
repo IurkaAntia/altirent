@@ -18,7 +18,7 @@ export default function AdventureDetail() {
   const { data: tours } = useFetchData(
     `tours?adventures=false&experience=false&typeId=${tour.typeId}&limit=6&${
       params.id ? `&id=${params.id}` : ""
-    }`
+    }`,
   );
 
   if (!tour || error) return notFound();
@@ -102,7 +102,7 @@ export default function AdventureDetail() {
         <p className="text-sm sm:text-base text-primary-100 mt-2">
           Location: {tour.location}
         </p>
-        <p className="text-sm text-primary-100">type: {tour.type.name}</p>
+        <p className="text-sm text-green-1000">type: {tour.type.name}</p>
         <p className="mt-4 text-base sm:text-lg">{tour.description}</p>
       </div>
 
